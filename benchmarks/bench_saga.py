@@ -144,8 +144,7 @@ def exp(solvers, penalty, single_target,
             y_n[y >= 5] = 0
             y = y_n
     elif dataset == 'iris':
-        iris = load_iris()
-        X, y = iris.data, iris.target
+        X, y = load_iris(return_X_y=True)
     elif dataset == '20newspaper':
         ng = fetch_20newsgroups_vectorized()
         X = ng.data

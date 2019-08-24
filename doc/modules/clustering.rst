@@ -1633,9 +1633,7 @@ Silhouette Coefficient for each sample.
   >>> from sklearn import metrics
   >>> from sklearn.metrics import pairwise_distances
   >>> from sklearn import datasets
-  >>> dataset = datasets.load_iris()
-  >>> X = dataset.data
-  >>> y = dataset.target
+  >>> X, y = datasets.load_iris(return_X_y=True)
 
 In normal usage, the Silhouette Coefficient is applied to the results of a
 cluster analysis.

@@ -101,8 +101,7 @@ Usage examples:
 
     >>> from sklearn import svm, datasets
     >>> from sklearn.model_selection import cross_val_score
-    >>> iris = datasets.load_iris()
-    >>> X, y = iris.data, iris.target
+    >>> X, y = datasets.load_iris(return_X_y=True)
     >>> clf = svm.SVC(random_state=0)
     >>> cross_val_score(clf, X, y, cv=5, scoring='recall_macro')
     array([0.96..., 0.96..., 0.96..., 0.93..., 1.        ])
